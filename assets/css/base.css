@@ -1,0 +1,46 @@
+@media screen and (min-width: 640px) {
+}
+
+@media screen and (min-width: 640px) and (orientation: landscape) {
+}
+
+@media screen and (min-width: 1024px) {
+}
+.wrap_card {
+  width: 100%;
+  position: relative;
+  padding-top: 107.647058824%;
+}
+
+.board_card {
+  inset: 0;
+  cursor: pointer;
+  perspective: 700px;
+  position: absolute;
+  transform-style: preserve-3d;
+}
+
+.flip_board_card {
+  transform: rotateY(180deg);
+  transition: transform 0.8s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.board_card_face {
+  inset: 0;
+  position: absolute;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
+.board_card_face--front {
+}
+
+.board_card_face--back {
+  transform: rotateY(-180deg);
+}
+
+.btn_active {
+  outline: 2px solid #fee456;
+  border-radius: 6px;
+  background-color: #ffcc001a;
+}
