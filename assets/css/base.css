@@ -1,11 +1,9 @@
-@media screen and (min-width: 640px) {
-}
+@media screen and (min-width: 640px) {}
 
-@media screen and (min-width: 640px) and (orientation: landscape) {
-}
+@media screen and (min-width: 640px) and (orientation: landscape) {}
 
-@media screen and (min-width: 1024px) {
-}
+@media screen and (min-width: 1024px) {}
+
 .wrap_card {
   width: 100%;
   position: relative;
@@ -32,8 +30,7 @@
   -webkit-backface-visibility: hidden;
 }
 
-.board_card_face--front {
-}
+.board_card_face--front {}
 
 .board_card_face--back {
   transform: rotateY(-180deg);
@@ -43,4 +40,68 @@
   outline: 2px solid #fee456;
   border-radius: 6px;
   background-color: #ffcc001a;
+}
+
+.heading_first {
+  animation: headingFirst 1.8s cubic-bezier(0.39, 0.575, 0.565, 1);
+}
+
+.heading_second {
+  animation: headingSecond 1.8s cubic-bezier(0.39, 0.575, 0.565, 1);
+}
+
+.heading_third {
+  animation: headingThird 1.8s cubic-bezier(0.39, 0.575, 0.565, 1);
+}
+
+.heading_fourth {
+  animation: headingFourth 1.8s cubic-bezier(0.39, 0.575, 0.565, 1);
+}
+
+@keyframes headingFirst {
+  from {
+    transform: translate(-10%, -10%);
+    filter: contrast(150%);
+  }
+
+  to {
+    transform: translate(0%, 0%);
+    filter: contrast(100%);
+  }
+}
+
+@keyframes headingSecond {
+  from {
+    transform: translate(-10%, 10%);
+    filter: contrast(150%);
+  }
+
+  to {
+    transform: translate(0%, 0%);
+    filter: contrast(100%);
+  }
+}
+
+@keyframes headingThird {
+  from {
+    transform: translate(10%, -10%);
+    filter: contrast(150%);
+  }
+
+  to {
+    transform: translate(0%, 0%);
+    filter: contrast(100%);
+  }
+}
+
+@keyframes headingFourth {
+  from {
+    transform: translate(-10%, 10%);
+    filter: contrast(150%);
+  }
+
+  to {
+    transform: translate(0%, 0%);
+    filter: contrast(100%);
+  }
 }

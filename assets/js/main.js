@@ -127,3 +127,20 @@ actionTab.forEach((actionTabElement, index) => {
     }, 2100);
   })
 })
+
+
+let callback = (entries, observer) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      fillImageTabAnimation(CURRENT_TAB_ACTIVE)
+      addOrRemoveAnimationTab("add")
+      setTimeout(() => {
+        addOrRemoveAnimationTab("remove")
+      }, 2300);
+    }
+  })
+}
+const observer = new IntersectionObserver(callback)
+
+const tabAnimation = document.getElementById('tab_animation')
+observer.observe(tabAnimation)
